@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+if [ -z "$DELAY" ]; then
+    echo "Error: Set the DELAY environment variable."
+    exit 1
+fi
+
+while true; do
+    ddclient
+    sleep "$DELAY"
+done

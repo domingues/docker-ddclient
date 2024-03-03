@@ -1,0 +1,8 @@
+services:
+  ddclient:
+    build: .
+    environment:
+      DELAY: 30
+    volumes:
+      - ./ddclient.conf:/etc/ddclient/ddclient.conf
+    restart: unless-stopped
